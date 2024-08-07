@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Play } from "lucide-react";
-import { SideBar } from "@/components/Sidebar";
-import { Footer } from "@/components/Footer";
+import { SideBar } from "@/components/Sidebar/Sidebar";
+import { Footer } from "@/components/Footer/Footer";
+import { Button } from "@/components/Button";
 
 export default function Home() {
   return (
@@ -20,6 +21,12 @@ export default function Home() {
           </div>
 
           <h1 className="font-semibold text-3xl mt-10 ">Good Afternoon</h1>
+
+        <div className="space-x-2">
+          <Button schema="error" className="bg-purple-700 h-20">Default</Button>
+          <Button schema="success">Sucesso</Button>
+          <Button schema="error">Falha</Button>
+        </div>
 
           <div className="grid grid-cols-3 gap-4 mt-4 ">
             <a className="bg-white/5 group rounded flex items-center gap-4 overflow-hidden hover:bg-white/10 transition-colors">
